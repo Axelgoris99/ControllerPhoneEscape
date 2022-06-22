@@ -24,7 +24,7 @@ namespace Mirror.Discovery
         public static bool SupportedOnThisPlatform { get { return Application.platform != RuntimePlatform.WebGLPlayer; } }
 
         // each game should have a random unique handshake,  this way you can tell if this is the same game or not
-        [HideInInspector]
+        //[HideInInspector]
         public long secretHandshake;
 
         [SerializeField]
