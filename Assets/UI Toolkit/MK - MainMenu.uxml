@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Mk-MainMenu.uss?fileID=7433441132597879392&amp;guid=cd2f0e235f4cc7e45974d8395b5745ec&amp;type=3#Mk-MainMenu" />
+    <ui:VisualElement name="root" style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgba(0, 48, 73, 0.42);">
+        <ui:VisualElement name="MainMenu" style="flex-grow: initial; align-items: center; justify-content: center; flex-shrink: initial; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; background-color: rgb(0, 48, 73); height: 398px; width: auto; flex-direction: column; flex-wrap: wrap; flex-basis: auto; -unity-text-align: middle-center;">
+            <ui:Label text="Main Menu" display-tooltip-when-elided="true" style="background-color: rgba(0, 0, 0, 0); font-size: 36px; color: rgb(210, 210, 210); margin-bottom: 15px;" />
+            <ui:Button text="Search for servers" display-tooltip-when-elided="true" name="FindServerBtn" class="FindServer" />
+            <ui:ListView focusable="true" name="ListServer" header-title="List Of Servers" show-add-remove-footer="false" reorderable="false" horizontal-scrolling="false" show-foldout-header="false" show-border="false" style="height: 131px; width: -14px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
