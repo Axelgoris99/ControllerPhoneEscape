@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Mario%20Kart%20UI/controls.uss?fileID=7433441132597879392&amp;guid=2a49a7cbacc807e45b50b314956f07b0&amp;type=3#controls" />
+    <ui:VisualElement name="root" style="justify-content: center; align-items: center; height: 492px; flex-grow: 1; background-color: rgb(28, 65, 101); flex-direction: row;">
+        <ui:VisualElement name="column1" style="width: 276px; height: 474px;">
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="QuitBtn" style="background-color: rgba(210, 210, 210, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="column2" style="width: 276px; height: 474px;" />
+        <ui:VisualElement name="column3" style="width: 276px; height: 474px; align-items: center; justify-content: center; flex-grow: 1; flex-shrink: 1;">
+            <ui:Button text="Jump" display-tooltip-when-elided="true" name="JumpBtn" class="bouton" style="width: 100%; height: 45%; margin-bottom: 4px; margin-top: 4px;" />
+            <ui:Button text="Fire" display-tooltip-when-elided="true" name="FireBtn" class="bouton" style="width: 100%; height: 45%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

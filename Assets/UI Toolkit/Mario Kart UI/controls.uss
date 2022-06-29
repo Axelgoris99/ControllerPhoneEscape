@@ -1,0 +1,52 @@
+.bouton {
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: rgba(214, 40, 40, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgba(210, 210, 210, 255);
+    width: 100%;
+    height: 50%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.bouton:hover {
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: rgba(247, 127, 0, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.bouton:active {
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: rgb(214, 40, 40);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}

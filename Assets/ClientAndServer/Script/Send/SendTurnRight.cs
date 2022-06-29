@@ -9,7 +9,7 @@ public class SendTurnRight : NetworkBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
-        TurnRight.OnTurnRight += SendTouch;
+        Movement.OnRight += SendTouch;
     }
 
     void SendTouch()
@@ -29,7 +29,7 @@ public class SendTurnRight : NetworkBehaviour
     void RightAction()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, 0, -45));
+        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, 0, - strenght));
         rb.MoveRotation(rb.rotation * deltaRotation);
     }
 }

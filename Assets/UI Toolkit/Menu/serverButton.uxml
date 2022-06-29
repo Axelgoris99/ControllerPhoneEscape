@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Menu/Mk%20-%20button.uss?fileID=7433441132597879392&amp;guid=cb7b198b02717e144a71d42d736eb50a&amp;type=3#Mk - button" />
+    <ui:VisualElement name="root" class="buttonServer">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="ServerIp" style="-unity-font-style: bold; font-size: 16px;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -9,7 +9,7 @@ public class SendMoveForward : NetworkBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
-        MoveForward.OnForward += SendTouch;
+        Movement.OnForward += SendTouch;
     }
 
     void SendTouch()

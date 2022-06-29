@@ -611,6 +611,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   networkDiscovery: {fileID: 1132988221}
   listEntryTemplate: {fileID: 9197481963319205126, guid: 9546a4a995015aa488ebcb1a5f22f642, type: 3}
+  originFindServerText: Search Servers
+  inSearchFindServertext: Stop Searching
 --- !u!1001 &1907869965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -686,5 +688,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3077656381994562623, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}
+      propertyPath: onlineScene
+      value: Assets/Scenes/MK - Controller.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077656381994562623, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}
+      propertyPath: offlineScene
+      value: Assets/Scenes/MK - Menu.unity
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3077656381994562618, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}

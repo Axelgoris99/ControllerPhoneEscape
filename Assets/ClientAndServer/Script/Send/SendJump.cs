@@ -5,16 +5,11 @@ using Mirror;
 public class SendJump : NetworkBehaviour
 {
     public int strenght = 5;
+    float distToGround = 1f;
     // Start is called before the first frame update
     private void OnEnable()
     {
-        Jump.OnJump += SendTouch;
-        Jump.OnJump += DebugData;
-    }
-
-    void DebugData()
-    {
-        Debug.Log("Touched");
+        ButtonManager.OnJump += SendTouch;
     }
 
     void SendTouch()
@@ -30,10 +25,16 @@ public class SendJump : NetworkBehaviour
         JumpAction();
     }
 
+    bool IsGrounded() {
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+    }
     [ServerCallback]
     void JumpAction()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.up * strenght, ForceMode.Impulse);
+        if (IsGrounded())
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.AddForce(Vector3.up * strenght, ForceMode.Impulse);
+        }
     }
 }
