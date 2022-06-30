@@ -4,18 +4,42 @@ using UnityEngine;
 using Mirror;
 public class SendJump : NetworkBehaviour
 {
+    CharacterController cc;
     public int strenght = 5;
-    float distToGround = 1f;
+    float distToGround = 1.0f;
     // Start is called before the first frame update
     private void OnEnable()
     {
+        cc = GetComponent<CharacterController>();
         ButtonManager.OnJump += SendTouch;
     }
+    private void Update()
+    {
+        if (isLocalPlayer)
+        {
+            CmdSendFall();
+        }
+    }
 
+    [Command(requiresAuthority = false)]
+    void CmdSendFall()
+    {
+        FallAction();
+    }
+    [ServerCallback]
+    void FallAction()
+    { 
+        if (!IsGrounded())
+        {
+            Vector3 down = transform.forward;
+            cc.Move(9.81f * down * Time.deltaTime);
+        }
+    }
     void SendTouch()
     {
         if (isLocalPlayer)
         {
+            Debug.Log("test");
             CmdSendTouch();
         }
     }
@@ -31,10 +55,12 @@ public class SendJump : NetworkBehaviour
     [ServerCallback]
     void JumpAction()
     {
+        
+        Debug.Log(IsGrounded());
         if (IsGrounded())
         {
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.AddForce(Vector3.up * strenght, ForceMode.Impulse);
+            Vector3 jumpMove = -transform.forward;
+            cc.Move(jumpMove * strenght * Time.deltaTime);
         }
     }
 }

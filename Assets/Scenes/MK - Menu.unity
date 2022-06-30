@@ -696,6 +696,14 @@ PrefabInstance:
       propertyPath: offlineScene
       value: Assets/Scenes/MK - Menu.unity
       objectReference: {fileID: 0}
+    - target: {fileID: 3077656381994562623, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 3065933907018194552, guid: ce50eedad85f4b247b77c6ed6fc29b6f, type: 3}
+    - target: {fileID: 3077656381994562623, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}
+      propertyPath: serverTickRate
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3077656381994562618, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 772a372264ed9764e8a104e39c2674e3, type: 3}

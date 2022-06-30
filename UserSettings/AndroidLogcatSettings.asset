@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "HVA167BF",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 23910,
+        "processId": 15669,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "HVA167BF",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 23910,
+            "exited": false
+        },
+        {
+            "deviceId": "HVA167BF",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 15669,
             "exited": false
         },
         {

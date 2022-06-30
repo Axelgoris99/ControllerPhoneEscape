@@ -5,29 +5,19 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Joystick joystick;
-    public delegate void TapAction();
+    public delegate void TapAction(float str);
     public static event TapAction OnForward;
-    public static event TapAction OnBackward;
-    public static event TapAction OnLeft;
-    public static event TapAction OnRight;
+    public static event TapAction OnTurn;
 
-    void FixedUpdate()
+    void Update()
     {
-        if(joystick.Horizontal >= .2f)
+        if(joystick.Horizontal >= .2f || joystick.Horizontal <= -0.2f)
         {
-            OnRight();
+            OnTurn(-joystick.Horizontal);
         }   
-        else if(joystick.Vertical <=  -0.2f)
+        if(joystick.Vertical >= .2f || joystick.Vertical <= -.2f)
         {
-            OnLeft();
-        }
-        if(joystick.Vertical >= .2f)
-        {
-            OnForward();
-        }
-        else if(joystick.Vertical <= -.2f)
-        {
-            OnBackward();
+            OnForward(joystick.Vertical);
         }
     }
 

@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-public class SendMoveForward : NetworkBehaviour
+
+public class SendTurn : NetworkBehaviour
 {
     public int strenght = 5;
 
     // Start is called before the first frame update
     private void OnEnable()
     {
-        Movement.OnForward += SendTouch;
+        Movement.OnTurn += SendTouch;
     }
 
     void SendTouch(float str)
@@ -22,15 +23,14 @@ public class SendMoveForward : NetworkBehaviour
     [Command(requiresAuthority = false)]
     void CmdSendTouch(float str)
     {
-        ForwardAction(str);
+        TurnAction(str);
     }
 
     [ServerCallback]
-    void ForwardAction(float str)
+    void TurnAction(float str)
     {
-        CharacterController cc = GetComponent<CharacterController>();
-        Vector3 forwardMove = transform.up;
-        cc.Move(forwardMove * str *  strenght * Time.deltaTime);
+        Vector3 turnMove = transform.forward;
+        transform.RotateAround(transform.position, turnMove, str * strenght * Time.deltaTime);
         //rb.AddForce(rb.transform.up * strenght, ForceMode.Impulse);
     }
 }
